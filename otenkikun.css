@@ -1,0 +1,200 @@
+
+body {
+  font-family:"Avenir Next", '游ゴシック',"Yu Gothic", sans-serif;
+    font-weight: lighter;
+}
+body {
+    animation: fadeIn 2s ease 0s 1 normal;
+    -webkit-animation: fadeIn 2s ease 0s 1 normal;
+}
+.section1 {
+ height: 100%;
+}
+
+.section1::before{
+ background-image: url("background.png");
+ overflow:hidden;
+ background-position: center center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ /*background-attachment: fixed;*/
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ content: "";
+ z-index: -1;
+}
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+.title{
+  font-size:150px;
+  text-align: center;
+  margin-top:5vh;
+}
+select{
+    outline:none;
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    background: none transparent;
+    vertical-align: middle;
+    color: inherit;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-left:10px;
+    border:1px solid #ddd;
+    color:#828c9a;
+    border-radius:10px;
+    font-size:150px;
+
+}
+select option{
+  background-color: #fff;
+  color: #333;
+}
+select::-ms-expand {
+  display: none;
+}
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #828c9a;
+}
+.select-wrap.select-primary:before{
+  color:#fff;
+}
+.select-wrap.select-primary > select{
+
+  /*background:#0084B4;*/
+  background:rgba(0,0,0,0.2);
+  color:#fff;
+  border:none;
+  /*border-color:#0084B4;*/
+}
+.select-wrap.select-primary > select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #fff;
+}
+.time{
+  width:360px;
+}
+.time_label{
+  margin-top:0px;
+}
+.time_title {
+  margin-top:2vh;
+  margin-left: 120px;
+  font-size:45px;
+}
+.place_title{
+  margin-top:5vh;
+  margin-left: 120px;
+  font-size:45px;
+}
+#hour{
+  margin-left: 120px;
+  margin-right:5px;
+}
+#place{
+  margin-left: 120px;
+  width:725px;
+  font-size: 120px;
+}
+input[type="submit"] {
+    -webkit-appearance: none;
+}
+.send{
+    display: inline-block;
+    padding: 40px 1em;
+    text-decoration: none;
+    background: rgba(0,100,255,0.4);/*ボタン色*/
+    color: #FFF;
+    /*border-bottom: solid 4px #627295;*/
+    /*border-radius: 3px;*/
+    border: none;
+    font-size:50px;
+    margin-left:605px;
+    margin-top:-150px;
+    border-radius: 10px;
+}
+
+.label-checkbox input[type="checkbox"]{
+  display: none;
+
+}
+.label-checkbox{
+  cursor: pointer;
+  position: relative;
+}
+.label-checkbox .lever{
+  margin-top:100px;
+  margin-left: 120px;
+  display: block;
+  color: #ccc;
+  font-weight: normal;
+  display: inline-block;
+  padding: 40px 150px;
+  border: 3px solid #e5e5e5;
+  border-radius:80px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  -webkit-transition: all 300ms cubic-bezier(1, 0, 0, 1);
+  -moz-transition: all 300ms cubic-bezier(1, 0, 0, 1);
+  -o-transition: all 300ms cubic-bezier(1, 0, 0, 1);
+  transition: all 300ms cubic-bezier(1, 0, 0, 1);
+  -webkit-transition-timing-function: cubic-bezier(1, 0, 0, 1);
+  -moz-transition-timing-function: cubic-bezier(1, 0, 0, 1);
+  -o-transition-timing-function: cubic-bezier(1, 0, 0, 1);
+  transition-timing-function: cubic-bezier(1, 0, 0, 1);
+  background-color: #fff;
+  font-size:50px;
+}
+.label-checkbox .lever:before{
+  content:'';
+  position: absolute;
+  left: 135px;
+  top:-63px;
+  border: 3px solid #e5e5e5;
+  background: #fff;
+  width: 120px;
+  height: 120px;
+  border-radius:100%;
+  -webkit-transition: all 300ms cubic-bezier(1, 0, 0, 1);
+  -moz-transition: all 300ms cubic-bezier(1, 0, 0, 1);
+  -o-transition: all 300ms cubic-bezier(1, 0, 0, 1);
+  transition: all 300ms cubic-bezier(1, 0, 0, 1);
+  -webkit-transition-timing-function: cubic-bezier(1, 0, 0, 1);
+  -moz-transition-timing-function: cubic-bezier(1, 0, 0, 1);
+  -o-transition-timing-function: cubic-bezier(1, 0, 0, 1);
+  transition-timing-function: cubic-bezier(1, 0, 0, 1);
+}
+.label-checkbox:hover .lever:before{
+   border-color: #ddd;
+}
+.label-checkbox input[type="checkbox"]:checked + .lever{
+   background: #5cb85c;
+   color: #fff;
+}
+.label-checkbox input[type="checkbox"]:checked + .lever{
+   border-color:#5cb85c;
+}
+.label-checkbox input[type="checkbox"]:checked + .lever:before{
+   left: 100%;
+   margin-left: -150px;
+   border-color: #fff;
+}

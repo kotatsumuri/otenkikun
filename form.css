@@ -1,0 +1,8 @@
+body {
+  font-family: 'Meiryo', sans-serif;
+  background-image: url("background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
